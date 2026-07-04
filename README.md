@@ -1,0 +1,1 @@
+# hermes-agente-auto-wake
