@@ -16,7 +16,6 @@ Exit codes:
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
 
 MEMORY_FILE = Path.home() / ".hermes" / "memories" / "MEMORY.md"
