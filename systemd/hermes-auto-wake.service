@@ -1,0 +1,10 @@
+[Unit]
+Description=Hermes auto-wake watcher service
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /root/.hermes/bin/auto-wake.py
+StandardOutput=append:/var/log/hermes-auto-wake.log
+StandardError=append:/var/log/hermes-auto-wake.log

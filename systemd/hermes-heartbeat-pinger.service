@@ -1,0 +1,10 @@
+[Unit]
+Description=Hermes heartbeat pinger service
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /root/.hermes/bin/heartbeat-pinger.py
+StandardOutput=append:/var/log/hermes-heartbeat.log
+StandardError=append:/var/log/hermes-heartbeat.log

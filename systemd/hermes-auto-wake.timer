@@ -1,0 +1,13 @@
+[Unit]
+Description=Hermes auto-wake watcher (detects zombie daemons and triggers recovery)
+After=network-online.target
+
+[Timer]
+# Run every 5 minutes, offset 30s so it doesn't fire on the minute
+OnCalendar=*-*-* *:00/5:30
+AccuracySec=5s
+Persistent=false
+Unit=hermes-auto-wake.service
+
+[Install]
+WantedBy=timers.target

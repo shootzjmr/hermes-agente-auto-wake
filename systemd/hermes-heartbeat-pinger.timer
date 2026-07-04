@@ -1,0 +1,13 @@
+[Unit]
+Description=Hermes heartbeat pinger (touches ~/.hermes/.heartbeat every minute)
+After=network-online.target
+
+[Timer]
+# Run every minute, on the second (avoid :00 cron stampede)
+OnCalendar=*-*-* *:*:00
+AccuracySec=1s
+Persistent=false
+Unit=hermes-heartbeat-pinger.service
+
+[Install]
+WantedBy=timers.target

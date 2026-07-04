@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# OS
+Thumbs.db
+
+# Secrets (never commit)
+.env
+*.env
+secrets/
+
+# Build/dist
+build/
+dist/
+*.whl
+
+# Local overrides
+.local/
